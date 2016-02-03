@@ -23,7 +23,10 @@ while True:
     print >>sys.stderr, data
     
     if data:
-        sent = sock.sendto('OK...' + data, address)
+	if(data in ["cat", "cat password.txt"]):
+		sent = sock.sendto('FLG_Ae194iz3', address)
+	else:	
+		sent = sock.sendto('OK' , address)
         print >>sys.stderr, 'sent %s bytes back to %s' % (sent, address)
 
 

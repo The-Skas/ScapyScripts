@@ -24,7 +24,7 @@ try:
 
 	    # Receive response
 	    data, server = sock.recvfrom(4096)
-	    print data
+	    print "Server:",data
 
 finally:
 	    print >>sys.stderr, 'closing socket'
